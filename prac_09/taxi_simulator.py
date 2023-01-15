@@ -3,6 +3,7 @@ from prac_09.silver_service_taxi import SilverServiceTaxi
 
 MENU = "q)uit, c)hoose taxi, d)rive"
 
+
 def main():
     bill = 0.00
     taxis = [Taxi("Prius", 100), SilverServiceTaxi("Limo", 100, 2), SilverServiceTaxi("Hummer", 200, 4)]
@@ -36,11 +37,11 @@ def main():
                 print("You need to choose a taxi before you can drive")
         else:
             print("Invalid option")
-        print(f"Bill to date: ${ bill}")
+        print(f"Bill to date: ${bill}")
         print(MENU)
         user_choice = input(">>> ").lower()
 
-    print(f"Total trip cost: ${ bill}")
+    print(f"Total trip cost: ${bill}")
     print("Taxis are now:")
     count = 0
     for taxi in taxis:
